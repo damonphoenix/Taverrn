@@ -217,8 +217,8 @@ async function encodeImage(
       const avif = await import("@jsquash/avif");
       const idata =
         data instanceof Uint8ClampedArray
-          ? new ImageData(data, width, height)
-          : new ImageData(new Uint8ClampedArray(data), width, height);
+          ? new ImageData(data as any, width, height)
+          : new ImageData(new Uint8ClampedArray(data) as any, width, height);
       const encoded = await avif.encode(idata, { speed: 4 });
       return { blob: new Blob([encoded], { type: "image/avif" }), mime: "image/avif", ext: "avif" };
     }
