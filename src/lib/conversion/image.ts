@@ -230,7 +230,7 @@ async function encodeImage(
       canvas.width = width;
       canvas.height = height;
       const ctx = canvas.getContext("2d")!;
-      const imageDataObj = new ImageData(new Uint8ClampedArray(data.buffer as ArrayBuffer), width, height);
+      const imageDataObj = new ImageData(new Uint8ClampedArray(data.buffer as ArrayBuffer) as any, width, height);
       ctx.putImageData(imageDataObj, 0, 0);
       const dataUrl = canvas.toDataURL("image/png");
       const svg = `<?xml version="1.0" encoding="UTF-8"?>
@@ -249,7 +249,7 @@ async function encodeImage(
       canvas.width = width;
       canvas.height = height;
       const ctx = canvas.getContext("2d")!;
-      const imageDataObj = new ImageData(new Uint8ClampedArray(data.buffer as ArrayBuffer), width, height);
+      const imageDataObj = new ImageData(new Uint8ClampedArray(data.buffer as ArrayBuffer) as any, width, height);
       ctx.putImageData(imageDataObj, 0, 0);
       const dataUrl = canvas.toDataURL("image/png");
       const pdf = new jsPDF({ unit: "px", format: [width, height] });
