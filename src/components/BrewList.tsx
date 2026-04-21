@@ -109,7 +109,7 @@ export function BrewList({
     <motion.div
       initial={{ opacity: 0, scale: 0.95, y: 10 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
-      transition={{ delay: index * 0.05, duration: 0.8, ease: [0.77, 0, 0.175, 1] }}
+      transition={{ delay: 0.05, duration: 0.8, ease: [0.77, 0, 0.175, 1] }}
       className="relative mt-8"
     >
       {menuContent}
