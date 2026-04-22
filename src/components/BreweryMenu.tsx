@@ -89,15 +89,15 @@ function CategorySection({
       </button>
 
       {open && (
-        <ul className="grid grid-cols-1 gap-2 px-5 pb-6 pt-1 sm:grid-cols-2">
+        <ul className="grid auto-rows-fr grid-cols-1 gap-2 px-5 pb-6 pt-1 sm:grid-cols-2">
           {row.brews.map((b) => (
-            <li key={b.id} className="relative">
+            <li key={b.id} className="relative h-full">
               <button
                 type="button"
                 disabled={!interactive || disabled}
                 onClick={() => onSelectBrew?.(b.id)}
                 className={[
-                  "group relative w-full overflow-hidden rounded-2xl border px-4 py-3 text-left transition-colors",
+                  "group relative h-full w-full overflow-hidden rounded-2xl border px-4 py-3 text-left transition-colors",
                   "border-[var(--accent-amber)]/18 bg-white/75 hover:border-[var(--accent-amber)]/45 hover:bg-white",
                   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-amber)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-base)]",
                   (!interactive || disabled) ? "cursor-default opacity-85" : "cursor-pointer",
@@ -108,7 +108,7 @@ function CategorySection({
                     : `${brewFromLabel(row.category, b)} to ${brewToLabel(b)}`
                 }
               >
-                <div className="flex items-start justify-between gap-3">
+                <div className="flex h-full items-start justify-between gap-3">
                   <div className="min-w-0">
                     <div className="flex items-center gap-2">
                       <span
@@ -131,10 +131,6 @@ function CategorySection({
                       {b.description}
                     </p>
                   </div>
-
-                  <span className="shrink-0 rounded-full bg-[var(--accent-amber)]/12 px-2.5 py-1 text-[10px] font-semibold uppercase tracking-[0.22em] text-[var(--accent-amber-dim)] ring-1 ring-[var(--accent-amber)]/20">
-                    Pour
-                  </span>
                 </div>
               </button>
             </li>
