@@ -15,7 +15,6 @@ import {
 import { getFileCategory, CATEGORY_LABELS, type FileCategory } from "@/lib/fileTypes";
 import { type BrewId, getBrewsForFile } from "@/lib/brews";
 import { runConversion, triggerDownload } from "@/lib/conversion";
-import { ErrorMessage } from "@/components/ui/ErrorMessage";
 import { BrewList } from "@/components/BrewList";
 import { BrewingProgress } from "@/components/BrewingProgress";
 import { TipJar } from "@/components/TipJar";
@@ -404,7 +403,7 @@ export function BarCounter() {
                 style={{ fontFamily: "var(--font-sans-ui)" }}
               >
                 <XCircle className="mt-0.5 h-4 w-4 shrink-0 text-amber-500" aria-hidden />
-                We don't have a conversion recipe for this file type yet. Drop a different ingredient.
+                {"We don't have a conversion recipe for this file type yet. Drop a different ingredient."}
               </motion.div>
             ) : (
               <>

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Terms governing your use of Brewery’s local file conversion tools.",
+  description: "Terms governing your use of Taverrn’s local file conversion tools.",
 };
 
 export default function TermsPage() {
@@ -80,6 +80,14 @@ export default function TermsPage() {
             You may not misuse the Service, including attempting to disrupt it, access others&apos; data
             without permission, or use it to distribute malware or unlawful content.
           </p>
+          <p>
+            You may not use the Service to create, convert, store, distribute, or facilitate access to
+            any child sexual abuse material (CSAM) or any content that sexually exploits or endangers
+            minors. We may take immediate action including removing access, terminating accounts, and
+            preserving and reporting information to the National Center for Missing &amp; Exploited
+            Children (NCMEC) and/or law enforcement, as required or permitted by law. We will cooperate
+            with investigations and pursue enforcement to the fullest extent of the law.
+          </p>
         </section>
 
         <section className="space-y-3" style={{ fontFamily: "var(--font-sans-ui)" }}>
@@ -106,7 +114,7 @@ export default function TermsPage() {
         <section className="space-y-3" style={{ fontFamily: "var(--font-sans-ui)" }}>
           <h2 className="text-lg font-medium text-[var(--text-primary)]">Intellectual property</h2>
           <p>
-            The Service, including its branding, design, and software, is owned by Brewery or its
+            The Service, including its branding, design, and software, is owned by Damon Phoenix or its
             licensors. These Terms do not grant you any rights to our trademarks or code except the
             limited right to use the Service as offered.
           </p>
