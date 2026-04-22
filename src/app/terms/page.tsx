@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms of Service",
-  description: "Terms governing your use of Taverrn’s local file conversion tools.",
+  description: "Terms governing your use of Brewery’s local file conversion tools.",
 };
 
 export default function TermsPage() {
@@ -102,7 +102,7 @@ export default function TermsPage() {
         <section className="space-y-3" style={{ fontFamily: "var(--font-sans-ui)" }}>
           <h2 className="text-lg font-medium text-[var(--text-primary)]">Limitation of liability</h2>
           <p>
-            TO THE FULLEST EXTENT PERMITTED BY LAW, TAVERRN AND ITS OPERATORS WILL NOT BE LIABLE FOR ANY
+            TO THE FULLEST EXTENT PERMITTED BY LAW, BREWERY AND ITS OPERATORS WILL NOT BE LIABLE FOR ANY
             INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR EXEMPLARY DAMAGES, OR ANY LOSS OF PROFITS,
             DATA, OR GOODWILL, ARISING OUT OF OR RELATED TO YOUR USE OF THE SERVICE, EVEN IF ADVISED OF THE
             POSSIBILITY OF SUCH DAMAGES. OUR TOTAL LIABILITY FOR ANY CLAIM ARISING FROM THE SERVICE WILL

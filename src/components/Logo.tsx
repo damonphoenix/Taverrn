@@ -1,5 +1,5 @@
 /**
- * Taverrn wordmark + barrel icon. Use for header and favicon source.
+ * Brewery wordmark + barrel icon. Use for header and favicon source.
  */
 export function Logo({
   className = "",
@@ -34,7 +34,7 @@ export function Logo({
         className={`font-semibold tracking-tight text-[var(--text-primary)] ${sizes[size]}`}
         
       >
-        Taverrn
+        Brewery
       </span>
     </div>
   );

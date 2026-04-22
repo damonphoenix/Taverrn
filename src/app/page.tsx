@@ -103,7 +103,7 @@ export default function Home() {
             Terms
           </Link>
           <a
-            href="https://github.com/damonphoenix/Taverrn/issues/new"
+            href="https://github.com/damonphoenix/brewery/issues/new"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[var(--text-secondary)] transition-colors hover:text-[var(--accent-amber)]"

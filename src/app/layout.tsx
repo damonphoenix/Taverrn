@@ -22,24 +22,24 @@ const siteUrl = "https://taverrn.phx.cx";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Taverrn - Brew your files",
-    template: "%s | Taverrn",
+    default: "Brewery - Brew your files",
+    template: "%s | Brewery",
   },
   description:
     "Drop your ingredients on the bar. We brew them into new formats - right in your browser. No data ever leaves your device.",
   keywords: ["file converter", "convert files", "privacy", "browser", "client-side", "WASM"],
-  authors: [{ name: "Taverrn" }],
+  authors: [{ name: "Brewery" }],
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: "Taverrn - Brew your files",
+    title: "Brewery - Brew your files",
     description:
       "Drop your ingredients on the bar. We brew them into new formats - right in your browser. No data ever leaves your device.",
-    siteName: "Taverrn",
+    siteName: "Brewery",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Taverrn - Brew your files",
+    title: "Brewery - Brew your files",
     description:
       "Drop your ingredients on the bar. We brew them into new formats - right in your browser.",
   },
@@ -56,7 +56,7 @@ export const viewport: Viewport = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebApplication",
-  name: "Taverrn",
+  name: "Brewery",
   description:
     "Client-side file conversion. Drop your ingredients on the bar; we brew them into new formats in your browser. No data ever leaves your device.",
   url: siteUrl,
@@ -90,7 +90,7 @@ export default function RootLayout({
                 <Link
                   href="/"
                   className="inline-flex rounded-2xl items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-amber)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg-base)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
-                  aria-label="Taverrn home"
+                  aria-label="Brewery home"
                 >
                   <span className="flex flex-col items-center">
                     <Logo size="md" />
