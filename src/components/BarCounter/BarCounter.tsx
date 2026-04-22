@@ -19,7 +19,7 @@ import { BrewingProgress } from "@/components/BrewingProgress";
 import { TipJar } from "@/components/TipJar";
 import { saveFile, loadFile, clearFile } from "@/lib/storage";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
-import { TavernMenu } from "@/components/TavernMenu";
+import { BreweryMenu } from "@/components/BreweryMenu";
 
 /* ─── helpers ─────────────────────────────────────────────────────────────── */
 
@@ -431,7 +431,7 @@ export function BarCounter() {
           </motion.div>
         ) : null}
 
-        <TavernMenu
+        <BreweryMenu
           file={file}
           category={fileCategory}
           onSelectBrew={hasFile && !showTipJar && availableBrews.length ? handleBrewSelect : undefined}

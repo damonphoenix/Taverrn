@@ -145,7 +145,7 @@ function CategorySection({
   );
 }
 
-export function TavernMenu({
+export function BreweryMenu({
   file,
   category,
   onSelectBrew,
@@ -189,7 +189,6 @@ export function TavernMenu({
         }}
       />
 
-      {/* masthead */}
       <header className="relative px-6 pb-5 pt-7 text-center">
         <div className="flex items-center justify-center gap-3">
           <span className="h-px flex-1 max-w-[60px] bg-[var(--accent-amber)]/30" />
@@ -218,7 +217,6 @@ export function TavernMenu({
 
       <div className="relative mx-6 border-t-2 border-dashed border-[var(--accent-amber)]/25" />
 
-      {/* categories */}
       <div className="relative">
         {categories.map((row) => (
           <CategorySection
@@ -231,7 +229,6 @@ export function TavernMenu({
         ))}
       </div>
 
-      {/* footer bar */}
       <footer className="relative flex items-center justify-center gap-2 border-t border-[var(--accent-amber)]/20 bg-[var(--accent-amber)]/5 px-5 py-3 text-[11px] font-medium uppercase tracking-[0.2em] text-[var(--accent-amber-dim)]">
         <span aria-hidden>✦</span>
         <span>Brewed fresh in your browser</span>
@@ -240,3 +237,4 @@ export function TavernMenu({
     </section>
   );
 }
+
