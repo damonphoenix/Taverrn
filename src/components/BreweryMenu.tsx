@@ -207,7 +207,7 @@ export function BreweryMenu({
         <p className="mt-2 text-sm text-[var(--text-secondary)]">
           {interactive
             ? "Choose what to pour your ingredient into."
-            : "Everything the brewery can pour — all recipes listed below."}
+            : "Everything the brewery can pour."}
         </p>
       </header>
 

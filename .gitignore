@@ -17,6 +17,9 @@ out/
 # WASM binaries — downloaded fresh by postinstall script (npm install)
 public/wasm/
 
+# Built before deploy (npm run build); run npm run zip-extension for local dev
+public/brewery-extension.zip
+
 # data / local databases
 .data/
 

@@ -87,9 +87,12 @@ function BrandMark({ browser }: { browser: ChromiumBrowser }) {
 export function ChromiumInstallButton({
   href,
   className,
+  download,
 }: {
   href: string;
   className?: string;
+  /** When set, link triggers a file download (manual extension install) instead of the Web Store. */
+  download?: string;
 }) {
   const [browser, setBrowser] = useState<ChromiumBrowser>("Chrome Web Store");
 
@@ -98,18 +101,24 @@ export function ChromiumInstallButton({
   }, []);
 
   const label = useMemo(() => {
+    if (download) return "Download extension";
     if (browser === "Chrome Web Store") return "View in Chrome Web Store";
     return `Add to ${browser}`;
-  }, [browser]);
+  }, [browser, download]);
 
   return (
     <a
       href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      download={download}
+      {...(download
+        ? {}
+        : {
+            target: "_blank",
+            rel: "noopener noreferrer",
+          })}
       className={className}
       aria-label={label}
-      title={label}
+      title={download ? `${label} — unzip the folder, then in chrome://extensions choose Load unpacked.` : label}
     >
       <BrandMark browser={browser} />
       {label}

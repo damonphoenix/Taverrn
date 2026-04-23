@@ -4,7 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev --webpack",
+    "prebuild": "node scripts/prepare-extension.mjs && node scripts/zip-extension.mjs",
     "build": "next build --webpack",
+    "zip-extension": "node scripts/prepare-extension.mjs && node scripts/zip-extension.mjs",
     "start": "next start",
     "lint": "eslint"
   },
@@ -44,6 +46,7 @@
     "@types/nodemailer": "^7.0.11",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "archiver": "^7.0.1",
     "drizzle-kit": "^0.31.9",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
