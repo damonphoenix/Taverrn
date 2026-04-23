@@ -3,7 +3,6 @@ import Link from "next/link";
 import { DM_Sans, JetBrains_Mono } from "next/font/google";
 import { Coffee } from "lucide-react";
 import { Logo } from "@/components/Logo";
-import { ChromiumInstallButton } from "@/components/ChromiumInstallButton";
 import "./globals.css";
 
 const dmSans = DM_Sans({
@@ -114,11 +113,6 @@ export default function RootLayout({
                 <Coffee className="h-4 w-4" />
                 Tip the Brewer
               </a>
-              <ChromiumInstallButton
-                href="/brewery-extension.zip"
-                download="brewery-extension.zip"
-                className="inline-flex items-center gap-2 rounded-full border border-[var(--accent-amber)]/25 bg-[var(--bg-surface)] px-4 py-2 text-sm font-semibold text-[var(--text-primary)] shadow-sm transition-all hover:border-[var(--accent-amber)]/45 hover:shadow disabled:opacity-50 disabled:cursor-not-allowed group"
-              />
             </div>
           </header>
           {children}

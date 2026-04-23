@@ -155,6 +155,7 @@ export function BreweryMenu({
   const interactive = !!file && !!category && !!onSelectBrew;
 
   const categories: CategoryRow[] = (["text", "image", "audio", "video"] as FileCategory[])
+    .filter((c) => !interactive || c === category)
     .map((c) => {
       const brews = interactive && category === c ? getBrewsForFile(file!, c) : getBrewsForCategory(c);
       return {

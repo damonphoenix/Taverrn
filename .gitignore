@@ -20,6 +20,9 @@ public/wasm/
 # Built before deploy (npm run build); run npm run zip-extension for local dev
 public/brewery-extension.zip
 
+# Copied from pdfjs-dist by prepare-extension script
+public/pdf.worker.min.mjs
+
 # data / local databases
 .data/
 

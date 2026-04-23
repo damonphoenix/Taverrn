@@ -98,6 +98,9 @@ async function decodeImage(
   }
   if (mime === "application/pdf" || ext === "pdf") {
     const pdfjsLib = await import("pdfjs-dist");
+    if (!pdfjsLib.GlobalWorkerOptions.workerSrc) {
+      pdfjsLib.GlobalWorkerOptions.workerSrc = "/pdf.worker.min.mjs";
+    }
     const pdf = await pdfjsLib.getDocument({
       data: buffer,
       useWorkerFetch: false,

@@ -6,6 +6,9 @@ import { getBrewById, MAX_MEDIA_SIZE_MB } from "../brews";
 
 const MAX_MEDIA_BYTES = 100 * 1024 * 1024;
 
+export const FFMPEG_CORE_BASE_URL =
+  "https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd";
+
 async function getFFmpeg(callbacks?: ConversionCallbacks) {
   const [{ FFmpeg }, { fetchFile, toBlobURL }] = await Promise.all([
     import("@ffmpeg/ffmpeg"),
@@ -22,10 +25,9 @@ async function getFFmpeg(callbacks?: ConversionCallbacks) {
     });
   }
 
-  const baseURL = "https://unpkg.com/@ffmpeg/core@0.12.6/dist/umd";
   await ffmpeg.load({
-    coreURL: await toBlobURL(`${baseURL}/ffmpeg-core.js`, "text/javascript"),
-    wasmURL: await toBlobURL(`${baseURL}/ffmpeg-core.wasm`, "application/wasm"),
+    coreURL: await toBlobURL(`${FFMPEG_CORE_BASE_URL}/ffmpeg-core.js`, "text/javascript"),
+    wasmURL: await toBlobURL(`${FFMPEG_CORE_BASE_URL}/ffmpeg-core.wasm`, "application/wasm"),
   });
 
   return { ffmpeg, fetchFile };

@@ -13,8 +13,23 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, '..');
 const wasmDir = path.join(root, 'extension', 'wasm');
+const publicDir = path.join(root, 'public');
 
 await mkdir(wasmDir, { recursive: true });
+await mkdir(publicDir, { recursive: true });
+
+async function copyPublic(src, dest) {
+  const srcPath = path.join(root, src);
+  const destPath = path.join(publicDir, dest);
+  if (!existsSync(srcPath)) {
+    console.warn(`⚠️  Not found (skipping): ${src}`);
+    return;
+  }
+  await copyFile(srcPath, destPath);
+  console.log(`✓ public/${dest}`);
+}
+
+await copyPublic('node_modules/pdfjs-dist/build/pdf.worker.min.mjs', 'pdf.worker.min.mjs');
 
 async function copy(src, dest) {
   const srcPath = path.join(root, src);
