@@ -61,7 +61,7 @@ export function TipJar({ onClose, fileName }: TipJarProps) {
                 className="mb-8 max-w-sm text-sm leading-relaxed text-[var(--text-secondary)]"
             >
                 Your file <strong>{fileName}</strong> was brewed completely on your device.
-                This web app is completely free and has no ads, so please consider tossing a coin to support your bartender!
+                This web app is completely free and has no ads, so please consider sending a mf $1.
             </motion.p>
 
             <motion.div
@@ -84,6 +84,23 @@ export function TipJar({ onClose, fileName }: TipJarProps) {
                     </a>
                 </Button>
             </motion.div>
+
+            <motion.p
+                initial={{ y: 10, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ delay: 0.45 }}
+                className="mt-5 text-center text-xs text-[var(--text-secondary)]"
+                style={{ fontFamily: "var(--font-sans-ui)" }}
+            >
+                <a
+                    href="https://github.com/damonphoenix/Brewery/issues/new"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline-offset-2 hover:text-[var(--accent-amber)] hover:underline"
+                >
+                    Bugs?
+                </a>
+            </motion.p>
         </div>
     );
 }
