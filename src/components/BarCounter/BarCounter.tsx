@@ -303,7 +303,7 @@ export function BarCounter() {
   }
 
   return (
-    <section aria-label="Drop your file on the bar counter" className="w-full max-w-xl mx-auto">
+    <section aria-label="Drop your file on the bar counter" className="w-full max-w-xl lg:max-w-4xl mx-auto">
       <VisuallyHidden>
         <input
           ref={inputRef}
@@ -381,7 +381,7 @@ export function BarCounter() {
         )}
       </AnimatePresence>
 
-      <div className="relative mt-8 flex w-full max-w-xl items-center gap-4 px-2">
+      <div className="relative mt-8 flex w-full max-w-xl lg:max-w-4xl items-center gap-4 px-2">
         <span className="h-px flex-1 bg-[var(--accent-amber)]/30" />
         <span
           className="text-xs font-semibold uppercase tracking-[0.32em] text-[var(--accent-amber)]"

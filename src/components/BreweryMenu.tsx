@@ -170,7 +170,7 @@ export function BreweryMenu({
   return (
     <section
       aria-label="Full menu of conversions"
-      className="relative mx-auto w-full max-w-2xl overflow-hidden rounded-[28px] border border-[var(--accent-amber)]/30 shadow-[0_18px_70px_-40px_rgba(120,70,20,0.35)]"
+      className="relative mx-auto w-full max-w-2xl lg:max-w-4xl overflow-hidden rounded-[28px] border border-[var(--accent-amber)]/30 shadow-[0_18px_70px_-40px_rgba(120,70,20,0.35)]"
       style={{
         background:
           "radial-gradient(120% 100% at 50% 0%, rgba(224,142,54,0.14) 0%, rgba(255,251,243,0.92) 40%, rgba(255,253,248,1) 100%)",

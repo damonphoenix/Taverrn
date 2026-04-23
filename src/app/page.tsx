@@ -28,7 +28,7 @@ export default function Home() {
         </header>
 
         <div className="w-full flex justify-center lg:justify-end">
-          <div className="w-full max-w-xl lg:max-w-2xl">
+          <div className="w-full max-w-xl lg:max-w-4xl">
             <BarCounter />
           </div>
         </div>
